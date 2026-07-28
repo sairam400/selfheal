@@ -7,7 +7,7 @@ examples.
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/selfheal.git
+git clone https://github.com/sairam400/selfheal.git
 cd selfheal
 python -m venv .venv
 source .venv/bin/activate  # or .venv\Scripts\activate on Windows

@@ -50,7 +50,7 @@ flowchart TD
 ```bash
 pip install selfheal          # once published to PyPI
 # or, from source:
-git clone https://github.com/YOUR_USERNAME/selfheal.git
+git clone https://github.com/sairam400/selfheal.git
 cd selfheal
 pip install -e .
 ```

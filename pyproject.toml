@@ -32,8 +32,8 @@ web = ["gradio>=4.0.0"]
 dev = ["pytest>=8.0.0", "ruff>=0.6.0"]
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/selfheal"
-Issues = "https://github.com/YOUR_USERNAME/selfheal/issues"
+Homepage = "https://github.com/sairam400/selfheal"
+Issues = "https://github.com/sairam400/selfheal/issues"
 
 [project.scripts]
 selfheal = "selfheal.cli:main"
