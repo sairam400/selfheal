@@ -106,17 +106,19 @@ for i, attempt in enumerate(result.attempts, start=1):
     print("succeeded:", attempt.succeeded)
 ```
 
-### Web demo (Gradio)
+### Web demo
 
 ```bash
 pip install -e ".[web]"
 python app.py
 ```
 
-Opens a local Gradio UI where each attempt appears as its own step
-(code → output/error → next fix). The same `app.py` deploys directly to
-[Hugging Face Spaces](https://huggingface.co/spaces) — just push this repo
-to a Space with an `ANTHROPIC_API_KEY` secret set.
+Opens a small FastAPI app at http://127.0.0.1:7860 with a terminal-style UI
+(no framework, no CDN dependencies) that streams each attempt live -- code,
+output/error, and the fix that follows -- the same panel structure the CLI
+prints with `rich`, just in the browser. Deploys to
+[Hugging Face Spaces](https://huggingface.co/spaces) via the included
+`Dockerfile` (Docker SDK) -- set `ANTHROPIC_API_KEY` as a Space secret.
 
 ## Safety
 

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>selfheal</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="term">
+    <div class="titlebar">
+      <span class="dots"><i></i><i></i><i></i></span>
+      <span class="titlebar-label">selfheal &mdash; agent session</span>
+    </div>
+
+    <div class="term-body">
+      <p class="intro"><span class="prompt">$</span> A coding agent that writes, runs, and fixes its own Python scripts. Give it a task below.</p>
+
+      <textarea
+        id="task"
+        rows="2"
+        placeholder="e.g. count the number of words in all .txt files in the current directory"
+      ></textarea>
+
+      <div class="examples" id="examples">
+        <span class="examples-label">try:</span>
+        <button
+          class="example-btn featured"
+          data-task="Read sales_data.csv (columns: product, quantity, price) and print the total revenue, then save a one-line summary to revenue_summary.txt"
+        >revenue summary (shows the heal)</button>
+        <button
+          class="example-btn"
+          data-task="Read employees.csv and write employees_over_30.csv with only rows where age > 30"
+        >filter employees</button>
+        <button
+          class="example-btn"
+          data-task="Write the first 20 Fibonacci numbers to fib.txt, one per line"
+        >fibonacci file</button>
+      </div>
+
+      <details class="advanced">
+        <summary>advanced settings</summary>
+        <div class="advanced-grid">
+          <label>max attempts <input type="number" id="maxAttempts" value="4" min="1" max="8" /></label>
+          <label>timeout (s) <input type="number" id="timeout" value="30" min="5" max="120" /></label>
+        </div>
+      </details>
+
+      <div class="run-row">
+        <label class="confirm">
+          <input type="checkbox" id="confirm" />
+          runs generated code on this server
+        </label>
+        <button id="runBtn" class="run-btn">run &#9656;</button>
+      </div>
+
+      <div id="feed" class="feed"></div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
